@@ -44,6 +44,6 @@ jobs:
       - uses: |
           cd api_yamdb/
           docker/build-push-action@v2 
-        with:
-          push: true
-          tags: skakovsku/yamdb:latest
+          with:
+            push: true
+            tags: skakovsku/yamdb:latest
