@@ -61,11 +61,11 @@ jobs:
             sudo docker-compose stop
             sudo docker-compose rm web
             cd /home/practicum
-            touch .env
-            echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
-            echo DB_NAME=${{ secrets.DB_NAME }} >> .env
-            echo POSTGRES_USER=${{ secrets.POSTGRES_USER }} >> .env
-            echo POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }} >> .env
-            echo DB_HOST=${{ secrets.DB_HOST }} >> .env
-            echo DB_PORT=${{ secrets.DB_PORT }} >> .env
+            touch /home/practicum/.env
+            echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> /home/practicum/.env
+            echo DB_NAME=${{ secrets.DB_NAME }} >> /home/practicum/.env
+            echo POSTGRES_USER=${{ secrets.POSTGRES_USER }} >> /home/practicum/.env
+            echo POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }} >> /home/practicum/.env
+            echo DB_HOST=${{ secrets.DB_HOST }} >> /home/practicum/.env
+            echo DB_PORT=${{ secrets.DB_PORT }} >> /home/practicum/.env
             sudo docker-compose up -d
